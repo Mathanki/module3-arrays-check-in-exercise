@@ -10,11 +10,17 @@ public class Customer {
             do {
                 System.out.print("Enter first name for customer " + (i+1) + ": ");
                 firstName = scanner.nextLine();
+                if (firstName.isEmpty()) {
+                    System.out.println("Please enter a valid first name.");
+                }
             } while (firstName.isEmpty());
 
             do {
                 System.out.print("Enter last name for customer " + (i+1) + ": ");
                 lastName = scanner.nextLine();
+                if (lastName.isEmpty()) {
+                    System.out.println("Please enter a valid first name.");
+                }
             } while (lastName.isEmpty());
 
             customers[i] = firstName + " " + lastName;
