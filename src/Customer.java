@@ -11,7 +11,7 @@ public class Customer {
                 System.out.print("Enter first name for customer " + (i+1) + ": ");
                 firstName = scanner.nextLine();
                 if (firstName.isEmpty()) {
-                    System.out.println("Please enter a valid first name.");
+                    System.out.println("Please enter a valid first name. Please try again.");
                 }
             } while (firstName.isEmpty());
 
@@ -19,7 +19,7 @@ public class Customer {
                 System.out.print("Enter last name for customer " + (i+1) + ": ");
                 lastName = scanner.nextLine();
                 if (lastName.isEmpty()) {
-                    System.out.println("Please enter a valid first name.");
+                    System.out.println("Please enter a valid first name. Please try again.");
                 }
             } while (lastName.isEmpty());
 
