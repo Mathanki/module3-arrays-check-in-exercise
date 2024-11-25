@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class Customer {
     String firstName, lastName;
     String[] customers = new String[5];
-    Scanner scanner = new Scanner(System.in);
+
 
     public void inputCustomerData(){
+        Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
             do {
                 System.out.print("Enter first name for customer " + (i+1) + ": ");
-                firstName = scanner.nextLine();
+                firstName = scanner.nextLine().trim();
                 if (firstName.isEmpty()) {
                     System.out.println("Please enter a valid first name. Please try again.");
                 }
@@ -17,7 +18,7 @@ public class Customer {
 
             do {
                 System.out.print("Enter last name for customer " + (i+1) + ": ");
-                lastName = scanner.nextLine();
+                lastName = scanner.nextLine().trim();
                 if (lastName.isEmpty()) {
                     System.out.println("Please enter a valid first name. Please try again.");
                 }
@@ -25,7 +26,7 @@ public class Customer {
 
             customers[i] = firstName + " " + lastName;
         }
-
+        scanner.close();
     }
 
     public void displayCustomerData(){
@@ -33,4 +34,6 @@ public class Customer {
             System.out.println("Full name " + fullName);
         }
     }
+
+
 }
